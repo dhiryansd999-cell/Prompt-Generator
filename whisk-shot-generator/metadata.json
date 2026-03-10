@@ -1,0 +1,5 @@
+{
+  "name": "Whisk Shot Generator",
+  "description": "Generate scripts and cinematic shot prompts for Google Whisk AI, complete with AI-generated previews.",
+  "requestFramePermissions": []
+}

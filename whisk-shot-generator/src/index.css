@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Playfair Display", serif;
+}
+
+@layer base {
+  :root {
+    --bg: #F8F8F7;
+    --fg: #141414;
+    --panel: rgba(255, 255, 255, 0.7);
+    --border: rgba(20, 20, 20, 0.1);
+    --accent: #141414;
+    --accent-fg: #F8F8F7;
+  }
+
+  .dark {
+    --bg: #0F0F0F;
+    --fg: #E4E3E0;
+    --panel: rgba(26, 26, 26, 0.7);
+    --border: rgba(228, 227, 224, 0.1);
+    --accent: #E4E3E0;
+    --accent-fg: #0F0F0F;
+  }
+
+  body {
+    @apply bg-[var(--bg)] text-[var(--fg)] font-sans antialiased transition-colors duration-300;
+  }
+}
+
+.data-row {
+  @apply border-b border-[var(--border)] transition-colors duration-200;
+}
+
+.data-row:hover {
+  @apply bg-[var(--accent)] text-[var(--accent-fg)];
+}
+
+.glass-panel {
+  @apply bg-[var(--panel)] backdrop-blur-md border border-[var(--border)] rounded-2xl;
+}
+
